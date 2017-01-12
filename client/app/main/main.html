@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="col-lg-4 col-centered">
+
+  <form class="thing-form">
+    <label>Search for some ngrams</label>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Query the timeseries" ng-model="$ctrl.query">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="$ctrl.submit()">Submit</button>
+      </span>
+    </p>
+    <button class="btn btn-md" ng-click="$ctrl.clear()">Clear</button>
+  </form>
+  </div>
+</div>
+
+<div class="text-center">
+  <nvd3 options='$ctrl.options' data='$ctrl.data'></nvd3>
+</div>
